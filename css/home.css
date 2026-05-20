@@ -1,0 +1,297 @@
+/* RESET */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* VARIÁVEIS */
+:root{
+
+  /* CORES */
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-primary: #0d0166;
+  --color-secondary: #860000;
+
+  /* FONTES */
+  --font-size-small: 0.9rem;
+  --font-size-normal: 1rem;
+  --font-size-medium: 1.12rem;
+  --font-size-large: 1.5rem;
+  --font-size-xlarge: 2rem;
+  --font-size-title: 4rem;
+
+  /* PESOS */
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* BORDAS */
+  --border-radius-small: 8px;
+  --border-radius-medium: 30px;
+  --border-radius-circle: 50%;
+
+  /* LARGURA */
+  --site-max-width: 1300px;
+}
+
+
+/* GLOBAIS */
+body{
+  font-family: "Poppins", sans-serif;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+.section-content{
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* HEADER */
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+
+  background: var(--color-black);
+}
+
+
+/* NAVBAR */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 0;
+}
+
+
+/* LOGO */
+.navbar-logo img{
+  width: 80px;
+}
+
+
+/* MENU */
+.navbar-menu{
+  display: flex;
+  gap: 50px;
+}
+
+
+/* LINKS */
+.navbar-link{
+  padding: 4px 15px;
+
+  color: var(--color-black);
+  background: var(--color-white);
+
+  border-radius: var(--border-radius-medium);
+
+  font-size: var(--font-size-small);
+  font-weight: var(--font-medium);
+
+  transition: box-shadow 0.5s ease;
+}
+
+.navbar-link:hover{
+  box-shadow: 0 0 15px var(--color-white);
+}
+
+
+.navbar :where(#menu-close-button, #menu-open-button){
+  display: none;
+}
+
+/* HERO */
+.hero-section{
+  /*background-image: url("../assets/img/foto diamantina 1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;*/
+  min-height: 100vh;
+  background: var(--color-white);
+}
+
+.hero-section .section-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  color: var(--color-white);
+}
+
+
+/* TEXTO HERO */
+.hero-section .hero-details .title{
+  font-family: "Oi", serif;
+
+  font-size: var(--font-size-title);
+
+  color: var(--color-primary);
+}
+
+.hero-section .hero-details .texto{
+  max-width: 70%;
+  margin: 24px 0 40px;
+
+  color: var(--color-black);
+
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-light);
+
+  margin-top: 20px;
+
+  line-height: 1.7;
+}
+
+.hero-section .hero-details .buttons{
+  display: flex;
+  gap: 23px;
+}
+
+.hero-section .hero-details .botao-catalogo {
+  padding: 10px 26px;
+  border: 2px solid transparent;
+
+  color: var(--color-white);
+  background: var(--color-secondary);
+
+  border-radius: var(--border-radius-medium);
+  font-weight: var(--font-medium);
+
+  transition: 0.5s ease;
+}
+
+.hero-section .hero-details .botao-catalogo:hover{
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  background: transparent;
+}
+
+.hero-section .hero-image-wrapper{
+  max-width: 500px;
+  margin-right: 30px;
+}
+
+
+/* RESPONSIVO */
+@media screen and (max-width: 900px){
+
+  :root {
+  --font-size-medium: 1rem;
+  --font-size-large: 1.3rem;
+  --font-size-xlarge: 1.5rem;
+  --font-size-title: 2.5rem;
+  }
+
+  body.show-mobile-menu header::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar :where(#menu-close-button, #menu-open-button){
+    display: block;
+    font-size: var(--font-size-large);
+  }
+
+  #menu-close-button{
+    color: var(--color-black);
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
+
+  #menu-open-button{
+   color: var(--color-white);
+   padding-right: 20px;
+  }
+
+  .navbar-menu{
+    display: block;
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    background: var(--color-white);
+    transition: left 0.2s ease;
+  }
+
+  body.show-mobile-menu .navbar-menu{
+    left: 0;
+  }
+
+  .navbar-menu .navbar-link{
+    color: var(--color-black);
+    display: block;
+
+
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-light);
+    margin-top: 17px;
+    padding: 10px 20px;
+  }
+
+  .hero-section .section-content{
+    gap: 50px;
+    text-align: center;
+    padding: 30px 20px 20px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .hero-section .hero-image-wrapper{
+    max-width: 240px; 
+    margin-right: 0;
+    margin-top: 30px;
+  }
+
+  .hero-section .hero-details :is(.title, .texto){
+    max-width: 100%;
+  }
+
+  .hero-section .hero-details .buttons{
+    justify-content: center;
+  }
+}

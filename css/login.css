@@ -1,0 +1,105 @@
+#main-login {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+}
+
+/* Tipografia Geral */
+h2, p {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+/* Container de Formulários */
+#container-login-cadastro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    width: 100%;
+    max-width: 800px;
+    margin-left: 5%;
+    padding: 10px;
+    
+    background-color: #1f286c;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+/* Seções Internas (Comum) */
+#secao-login, 
+#secao-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    
+    padding: 20px 15px;
+    border-radius: 20px;
+}
+
+/* Seções Internas (Específico) */
+#secao-login {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#secao-cadastro {
+    flex: 2; /* Cadastro mantém a proporção maior */
+    color: #ffffff;
+}
+
+/* Elementos de Formulário (Comum) */
+#container-login-cadastro input,
+#container-login-cadastro button {
+    display: block;
+    width: 90%;
+    max-width: 350px;
+    margin-bottom: 15px;
+    padding: 6px;
+}
+
+/* Inputs (Estilo) */
+#secao-login input {
+    border: 3px solid #1f286c;
+}
+
+#secao-cadastro input {
+    background-color: #1f286c;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+}
+
+#secao-login input, 
+#secao-cadastro input {
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+/* Botões (Estilo) */
+#secao-login button {
+    background-color: #ffffff;
+    border: 3px solid #1f286c;
+}
+
+#secao-cadastro button {
+    background-color: #1f286c;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+}
+
+#secao-login button, 
+#secao-cadastro button {
+    border-radius: 25px;
+    font-size: 1.8rem;
+    cursor: pointer; /* Adicionado para melhor UX */
+}
+
+/* Mídia e Rodapé */
+#imagem-login-cadastro {
+    height: 90%;
+    object-fit: contain;
+}

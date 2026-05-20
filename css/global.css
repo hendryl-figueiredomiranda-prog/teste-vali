@@ -1,0 +1,38 @@
+/* Reset e Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout Principal */
+main {
+    background-color: #ffffff;
+    background-image: url('../assets/img/textura_tatus.png');
+}
+
+footer {
+    height: 25vh;
+    background-color: #1f286c;
+    color: #f0f0f0;
+}
+
+#footer-content{
+    display: flex;
+    height: 90%;
+    padding: 1%;
+}
+
+.footer-section{
+    flex: 1;
+}
+
+.footer-section h3, .footer-section p{
+    margin-top: 5px;
+    align-items: center;
+}
+
+#footer-bottom{
+    height: 10%;
+    text-align: center;
+}

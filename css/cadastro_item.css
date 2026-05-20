@@ -1,0 +1,52 @@
+#main-crude-item{
+    display: flex;
+    align-items: center;
+    padding: 5%;
+    height: 100vh;
+    gap: 10vh;
+}
+
+#container-crude-item{
+    display: flex;
+}
+
+#secao-crude-item{
+    font-size: 2vw;
+}
+
+#imagem-item-cadastro{
+    max-width: 35%;
+}
+
+#linha-divisoria-crude{
+    border-top: 2px solid #1f286c;
+    margin: 10% 0 
+}
+
+#form-editar-cadastro-item button,
+#form-cadastrar-novo-item button {
+    background-color: #1f286c;
+    color:#ffffff;
+    cursor: pointer;
+}
+
+#form-editar-cadastro-item input {    
+    background-color: #ffffff;
+    color: #000000;
+
+}
+
+#form-editar-cadastro-item button,
+#form-cadastrar-novo-item button,
+#form-editar-cadastro-item input {
+    border: 3px solid #1f286c;
+    border-radius: 20px;
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 6px;
+}
+
+#form-editar-cadastro-item button,
+#form-editar-cadastro-item input {
+    margin-top: 20px;
+}
